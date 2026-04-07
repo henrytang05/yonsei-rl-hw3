@@ -1,0 +1,16 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.remember/
+.understand-anything/
+CAS4160__Homework_3__2026S_.pdf
+__MACOSX/
+experiments/
+hw3.zip
