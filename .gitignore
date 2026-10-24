@@ -1,16 +1,43 @@
-# Python-generated files
+# Python
 __pycache__/
 *.py[oc]
 build/
 dist/
 wheels/
-*.egg-info
+*.egg-info/
 
 # Virtual environments
-.venv
+.venv/
+
+# Training data
+data/
+data2/
+logs/
+logs2/
+
+# Submission artifacts
+hw3_2025849132/
+hw3_2025849132.zip
+hw3.zip
+*.zip
+
+# LaTeX compiled artifacts
+latex/*.aux
+latex/*.fdb_latexmk
+latex/*.fls
+latex/*.log
+latex/*.out
+latex/*.synctex.gz
+latex/*.pdf
+
+# macOS
+.DS_Store
+__MACOSX/
+
+# Misc
+uv.lock
 .remember/
 .understand-anything/
-CAS4160__Homework_3__2026S_.pdf
-__MACOSX/
 experiments/
-hw3.zip
+CLAUDE.md
+CAS4160__Homework_3__2026S_.pdf

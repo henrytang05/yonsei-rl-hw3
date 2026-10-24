@@ -14,6 +14,7 @@ from cas4160.env_configs.schedule import (
 )
 import cas4160.infrastructure.pytorch_util as ptu
 
+
 def basic_dqn_config(
     env_name: str,
     exp_name: Optional[str] = None,
@@ -27,7 +28,7 @@ def basic_dqn_config(
     use_double_q: bool = False,
     learning_starts: int = 20000,
     batch_size: int = 128,
-    **kwargs
+    **kwargs,
 ):
     def make_critic(observation_shape: Tuple[int, ...], num_actions: int) -> nn.Module:
         return ptu.build_mlp(
@@ -56,12 +57,8 @@ def basic_dqn_config(
     def make_env(render: bool = False):
         return RecordEpisodeStatistics(gym.make(env_name, render_mode="rgb_array"))
 
-    log_string = "{}_{}_s{}_l{}_d{}".format(
-        exp_name or "dqn",
-        env_name,
-        hidden_size,
-        num_layers,
-        discount,
+    log_string = "{}_{}_s{}_l{}_d{}_lr{}".format(
+        exp_name or "dqn", env_name, hidden_size, num_layers, discount, learning_rate
     )
 
     if use_double_q:
